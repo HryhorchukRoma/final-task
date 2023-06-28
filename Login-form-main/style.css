@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(to right, #333399, #ff00cc);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-card-div {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  position: relative;
+}
+.login-card::before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.15);
+  inset: 0;
+  transform: rotate(-5deg);
+  z-index: -1;
+}
+.margin {
+  margin: 15px 0;
+}
+.login-card {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+.login-card-header {
+  text-align: center;
+}
+.login-card-header h1 {
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+.login-card-form {
+  width: 100%;
+}
+.forgotten__lane,
+.form-lane input {
+  width: 100%;
+  padding: 16px 48px;
+  border: 0;
+  border-radius: 100px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+}
+.forgotten__lane,
+.form-lane input:focus {
+  background: white;
+  border: 0;
+}
+.form-lane,
+.forgotten__lane {
+  position: relative;
+}
+.form-lane-icon {
+  opacity: 0.3;
+  position: absolute;
+  top: 24%;
+  left: 4%;
+}
+.form-other {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.link:hover {
+  text-decoration: underline;
+  color: navy;
+}
+.form-other input {
+  height: 16px;
+  width: 16px;
+}
+.form-other div {
+  margin: 15px 8px;
+}
+.form-button {
+  font-size: 18px;
+  background: #000;
+  color: #fff;
+  border-radius: 100px;
+  width: 100%;
+  padding: 16px;
+  letter-spacing: 1px;
+  border: 0;
+}
+.form-button:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.85);
+  border: 0;
+}
+.link {
+  text-decoration: none;
+}
+.footer-p {
+  letter-spacing: 1px;
+}
+.footer-icons {
+  display: flex;
+  justify-content: center;
+}
+.footer-icon {
+  margin: 0 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-icon:hover {
+  background: #fff;
+}
+@media (max-width: 500px) {
+  .login-card-div {
+    width: 93%;
+  }
+  .login-card-bot {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .form-other {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+  .forgot {
+    display: flex;
+    align-items: flex-end;
+    text-align: right;
+    width: 40%;
+  }
+  .form-lane-icon {
+    left: 5%;
+  }
+}
+
+.forgotten {
+  backdrop-filter: blur(10px);
+  position: absolute;
+  height: 400px;
+  width: 300px;
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 10px;
+}
+
+.forgot-button {
+  width: 280px;
+  margin-top: auto;
+}
