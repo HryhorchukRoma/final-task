@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
     name = form.querySelector('[type="email"]'),
     password = form.querySelector('[type = "password"]'),
     remember = form.querySelector("#remcheck"),
-    rememberPassword = form.querySelector(".forgot");
+    forgot = form.querySelector(".forgot");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -42,13 +42,17 @@ window.addEventListener("DOMContentLoaded", () => {
     return emailPattern.test(email);
   }
 
-  rememberPassword.addEventListener("click", (e) => {
+  forgot.addEventListener("click", () => {
     document.querySelector(".forgotten").style = "display: flex;";
+    document.querySelector(".cancel").addEventListener("click", () => {
+      document.querySelector(".forgotten").style = "display: none;";
+    });
   });
+
   document.querySelector(".forgot-button").addEventListener("click", () => {
     if (
-      document.querySelector(".forgot-password").value.length >= 8 &&
-      isValidEmail(document.querySelector(".forgot-mail").value === "true")
+      isValidEmail(document.querySelector(".forgot-mail").value) === true &&
+      document.querySelector(".forgot-password").value.length >= 8
     ) {
       document.querySelector(".forgotten").style = "display: none;";
       alert(
@@ -56,6 +60,8 @@ window.addEventListener("DOMContentLoaded", () => {
           document.querySelector(".forgot-mail").value
         }, please check to accept`
       );
-    } else alert("Enter all of data");
+    } else {
+      alert("Enter all of data");
+    }
   });
 });

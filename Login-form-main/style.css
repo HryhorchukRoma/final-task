@@ -96,6 +96,7 @@ body {
   letter-spacing: 1px;
   border: 0;
 }
+.cancel:hover,
 .form-button:hover {
   cursor: pointer;
   background: rgba(0, 0, 0, 0.85);
@@ -168,4 +169,13 @@ body {
 .forgot-button {
   width: 280px;
   margin-top: auto;
+}
+.cancel {
+  margin: 10px;
+  width: 100px;
+  height: 30px;
+  border: none;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
 }
